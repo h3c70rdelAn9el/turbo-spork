@@ -8,6 +8,8 @@
         <router-link to="/characters">Characters</router-link>
       </div>
     </div>
-    <router-view />
+    <div class="bg-gray-300">
+      <router-view />
+    </div>
   </div>
 </template>
