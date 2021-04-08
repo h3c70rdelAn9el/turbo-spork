@@ -2,16 +2,14 @@
 <div class="-ml-3 h-full">
   <ImageSlider />
 </div>
-<div class="my-3 ml-3 flex w-full">
+<div class="my-3 ml-3 mt-10 pb-20 flex w-full">
   <div>
-    <transition name="fade">
+    <transition name="fade" class="h-8">
       <h1 v-if="isDetailsShowing" class="text-center">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quia.
       </h1>
     </transition>
-    <div>
-      <button @click="isDetailsShowing = !isDetailsShowing" class="px-2 rounded border">Toggle information</button>
-    </div>
+      <button @click="isDetailsShowing = !isDetailsShowing" class="px-2 rounded border ml-6">Toggle information</button>
   </div>
 </div>
 </template>
