@@ -3,6 +3,7 @@ import Characters from './src/pages/Characters.vue'
 import Home from './src/pages/Home.vue'
 import Calendar from './src/pages/Calendar.vue'
 import Markdown from './src/pages/Markdown.vue'
+import Slider from '@/pages/Slider.vue'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/markdown',
     component: Markdown
+  },
+  {
+    path: '/slider',
+    component: Slider
   }
 ]
 

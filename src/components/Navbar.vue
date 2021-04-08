@@ -29,6 +29,10 @@ export default {
         {
           name: 'Markdown',
           url: '/markdown'
+        },
+        {
+          name: 'Slider',
+          url: '/slider'
         }
       ]
     }

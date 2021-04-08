@@ -3,7 +3,6 @@
     <h1 class="w-full text-center text-3xl my-4">Mardown</h1>
     <section class="flex m-auto h-screen w-10/12">
       <article class="w-1/2 bg-gray-300 border">
-        <!-- <textarea ref="markdownTextArea" class="w-full h-full" :value="text" @input="update"></textarea> -->
         <textarea class="w-full h-full" :value="text" @input="update"></textarea>
 
       </article>
@@ -36,13 +35,6 @@ export default {
       const task = () => (this.text = e.target.value)
       this.debounce(task, 500)
     },
-    // debounce(func, wait = 1000) {
-    //   clearTimeout(this.timeout);
-    //   this.timeout = setTimeout(func, wait);
-    // }
   },
-  // mounted() {
-  //   this.$refs.markdownTextArea.focus()
-  // },
 }
 </script>
