@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Characters from './src/pages/Characters.vue'
 import Home from './src/pages/Home.vue'
 import Calendar from './src/pages/Calendar.vue'
+import Markdown from './src/pages/Markdown.vue'
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/calendar',
     component: Calendar
+  },
+  {
+    path: '/markdown',
+    component: Markdown
   }
 ]
 

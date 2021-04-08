@@ -25,6 +25,10 @@ export default {
         {
           name: 'Calendar',
           url: '/calendar'
+        },
+        {
+          name: 'Markdown',
+          url: '/markdown'
         }
       ]
     }
