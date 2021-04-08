@@ -1,5 +1,5 @@
 <template>
-<div class="-ml-3">
+<div class="-ml-3 h-full">
   <ImageSlider />
 </div>
 <div class="my-3 ml-3 flex w-full">
@@ -8,7 +8,6 @@
       <h1 v-if="isDetailsShowing" class="text-center">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, quia.
       </h1>
-
     </transition>
     <div>
       <button @click="isDetailsShowing = !isDetailsShowing" class="px-2 rounded border">Toggle information</button>

@@ -5,7 +5,11 @@
         <div v-if="currentSlide === index" class=" w-full" :class="color" style="height:450px"></div>
       </transition>
     </div>
-    <div class=" w-full" style="height: 450px">
+    <div class="w-full flex z-20" style="height: 450px">
+      <div class="mx-auto my-auto text-center">
+        <h2 class="text-2xl">A basic carousel!</h2>
+        <p class="mx-28">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptates similique suscipit amet, nesciunt soluta minus eligendi eum voluptas quaerat!</p>
+      </div>
       <div class="absolute bottom-0 flex w-full justify-center">
         <div v-for="(slide, index) in slides" :key="slide" @click="makeActive(index)" :class="currentSlide === index ? 'bg-gray-700' : 'bg-gray-200'" class="w-2 mx-1 h-2 rounded-full cursor-pointer">
         </div>
@@ -22,7 +26,7 @@ export default {
       slides: [
         'bg-blue-600',
         'bg-red-600',
-        'bg-purple-600'
+        'bg-purple-600',
       ],
       interval: '',
       isDetailsShowing: true
