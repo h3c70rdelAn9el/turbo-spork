@@ -16,10 +16,10 @@
 
 <script>
 import marked from 'marked'
-// import debounce from '../utilites/mixins/debounce'
+import debounce from '../utilities/mixins/debounce'
 
 export default {
-  // mixins: [debounce],
+  mixins: [debounce],
   data() {
     return {
       text: '',
@@ -36,10 +36,10 @@ export default {
       const task = () => (this.text = e.target.value)
       this.debounce(task, 500)
     },
-    debounce(func, wait = 1000) {
-      clearTimeout(this.timeout);
-      this.timeout = setTimeout(func, wait);
-    }
+    // debounce(func, wait = 1000) {
+    //   clearTimeout(this.timeout);
+    //   this.timeout = setTimeout(func, wait);
+    // }
   },
   // mounted() {
   //   this.$refs.markdownTextArea.focus()
