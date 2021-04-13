@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import firebase from '../utilities/firebase'
 export default {
   data() {
     return {
@@ -44,14 +45,14 @@ export default {
   //     return this.$store.state.isLoggedIn
   //   }
   // },
-  // methods: {
-  //   logout() {
-  //     firebase
-  //       .auth()
-  //       .signOut()
-  //       // .then(res=> {})
-  //       // .catch((e) => {})
-  //   }
-  // }
+  methods: {
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        // .then(res=> {})
+        // .catch((e) => {})
+    }
+  }
 }
 </script>
