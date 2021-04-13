@@ -20,7 +20,7 @@
                   <label class="my-4" for="email">Email</label>
                   <input
                     ref="emailRef"
-                    v-model="form.email"
+                    v-model="email"
                     type="text"
                     class="rounded shadow p-2 w-full"
                     placeholder="user@example.com"
@@ -29,7 +29,7 @@
                 <div class="mt-3">
                   <label class="my-4" for="password">Password</label>
                   <input
-                    v-model="form.password"
+                    v-model="password"
                     type="password"
                     class="rounded shadow p-2 w-full"
                     placeholder="********"
@@ -54,17 +54,27 @@
 </template>
 
 <script>
+  import firebase from '../utilities/firebase'
+
   export default {
     data() {
       return {
-        form: {
-          email: '',
-          password: '',
-        },
+        email: '',
+        password: '',
       }
     },
     methods: {
-      submit() {},
+      submit() {
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password)
+          .then(res => {
+            console.log(res)
+          })
+          .catch(e => {
+            console.log(e)
+          })
+      },
     },
   }
 </script>

@@ -11,12 +11,28 @@
 <script>
 import Navbar from '@/components/Navbar'
 import LoginModal from '@/components/LoginModal'
+import firebase from './utilities/firebase'
 
 export default {
   data() {
     return {
       isLoginOpen: false,
+      isLoggedIn: false,
+      authUser: {}
     }
+  },
+  mounted() {
+    firebase
+      .auth()
+      .onAuthStateChanged((user) => {
+        if (user) {
+          this.isLoggedIn = true
+          this.authUser = user
+        } else {
+          this.isLoggedIn = false
+          this.authUser = {}
+        }
+      })
   },
   components: {
     Navbar,
