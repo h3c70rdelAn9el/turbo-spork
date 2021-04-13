@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      @click="$emit('close-login')"
+      @click="close"
       class="z-20 h-screen w-screen bg-gray-500 fixed top-0 opacity-50"
     ></section>
     <div class="absolute inset-0">
@@ -41,7 +41,7 @@
                     class="w-full rounded shadow-md bg-blue-400 text-black p-2 hover:bg-blue-200"
                   >
                     <span v-if="!isLoading">Login</span>
-                    <span v-else>&#x23F3;</span>
+                    <span v-else>⏳</span>
                   </button>
                 </div>
               </form>
@@ -61,20 +61,29 @@
       return {
         email: '',
         password: '',
+        isLoading: false
       }
     },
     methods: {
       submit() {
+        this.isLoading = true
         firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password)
-          .then(res => {
-            console.log(res)
+          .then(() => {
+            this.email = ''
+            this.password = ''
+            this.isLoading = false
+            this.close()
           })
-          .catch(e => {
+          .catch((e) => {
             console.log(e)
+            this.isLoading = false
           })
       },
+      close() {
+        this.$emit("close-login");
+      }
     },
   }
 </script>
