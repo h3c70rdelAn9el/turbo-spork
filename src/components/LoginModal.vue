@@ -85,5 +85,8 @@
         this.$emit("close-login");
       }
     },
+    mounted() {
+      this.$refs.emailRef.focus()
+    },
   }
 </script>
