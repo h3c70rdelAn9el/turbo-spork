@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar @open-login="isLoginOpen = true" />
+    <Navbar :isLoggedIn="isLoggedIn" @open-login="isLoginOpen = true" />
     <div class="bg-gray-300">
       <router-view />
     </div>

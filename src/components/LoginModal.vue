@@ -43,6 +43,7 @@
                     <span v-if="!isLoading">Login</span>
                     <span v-else>⏳</span>
                   </button>
+                  <Google @close-google-login="close" />
                 </div>
               </form>
             </div>
@@ -54,39 +55,44 @@
 </template>
 
 <script>
-  import firebase from '../utilities/firebase'
+import firebase from '../utilities/firebase'
+import Google from '@/components/Login/Google.vue'
 
-  export default {
-    data() {
-      return {
-        email: '',
-        password: '',
-        isLoading: false
-      }
+export default {
+  components: {
+    Google
+  },
+  data() {
+    return {
+      email: '',
+      password: '',
+      isLoading: false,
+    }
+  },
+  methods: {
+    submit() {
+      this.isLoading = true
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+          this.email = ''
+          this.password = ''
+          this.isLoading = false
+          this.close()
+        })
+        .catch((e) => {
+          console.log(e)
+          this.isLoading = false
+        })
     },
-    methods: {
-      submit() {
-        this.isLoading = true
-        firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password)
-          .then(() => {
-            this.email = ''
-            this.password = ''
-            this.isLoading = false
-            this.close()
-          })
-          .catch((e) => {
-            console.log(e)
-            this.isLoading = false
-          })
-      },
-      close() {
-        this.$emit("close-login");
-      }
+    close() {
+      this.$emit('close-login')
     },
-    mounted() {
-      this.$refs.emailRef.focus()
-    },
-  }
+ 
+  },
+  mounted() {
+    this.$refs.emailRef.focus()
+  },
+}
 </script>
