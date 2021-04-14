@@ -50,72 +50,105 @@
 </template>
 
 <script>
+  import { computed, onMounted, ref } from 'vue'
+
   export default {
-    data() {
-      return {
-        newCharacter: [
-          {
-            name: '',
-            house: '',
-          },
-        ],
-        characters: [
-          {
-            name: 'Ned Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Catelyn Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Arya Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Sansa Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Rob Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Bran Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Rickon Stark',
-            house: 'Stark',
-          },
-          {
-            name: 'Jon Snow',
-            house: 'Stark',
-          },
-        ],
+    setup() {
+      const newCharacterRef = ref('')
+      const newCharacter = ref([{
+        name: '',
+        house: ''
+      }])
+      const characters = ref([
+        {
+          name: 'Ned Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Catelyn Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Arya Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Sansa Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Rob Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Bran Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Rickon Stark',
+          house: 'Stark',
+        },
+        {
+          name: 'Jon Snow',
+          house: 'Stark',
+        },
+      ]);
+
+      onMounted(() => {
+        newCharacterRef.value.focus()
+      });
+
+      const charactersCount = computed({
+        get: () => characters.value.length
+      });
+
+      function remove(index) {
+        characters.value = characters.value.filter((character, i) => i != index)
       }
-    },
-    mounted() {
-      this.$refs.newCharacterRef.focus()
-    },
-    methods: {
-      addCharacter() {
-        if (this.newCharacter !== '') {
-          this.characters.push({
-            name: this.newCharacter.name,
-            house: this.newCharacter.house,
-          })
-          this.newCharacter = ''
+
+      function addCharacter() {
+        if (newCharacter.value !== '') {
+          characters.value.unshift({ name: newCharacter.value })
+          newCharacter.value = ''
         }
-      },
-      removeCharacter(index) {
-        this.characters = this.characters.filter((character, i) => i != index)
-      },
-    },
-    computed: {
-      charactersCount() {
-        return this.characters.length
-      },
-    },
+      }
+
+      return { characters, newCharacter, remove, addCharacter, newCharacterRef, charactersCount }
+    }
+    // data() {
+    //   return {
+    //     newCharacter: [
+    //       {
+    //         name: '',
+    //         house: '',
+    //       },
+    //     ],
+    //     characters: [
+
+    //     ],
+    //   }
+    // },
+    // mounted() {
+    //   this.$refs.newCharacterRef.focus()
+    // },
+    // methods: {
+    //   addCharacter() {
+    //     if (this.newCharacter !== '') {
+    //       this.characters.push({
+    //         name: this.newCharacter.name,
+    //         house: this.newCharacter.house,
+    //       })
+    //       this.newCharacter = ''
+    //     }
+    //   },
+    //   removeCharacter(index) {
+    //     this.characters = this.characters.filter((character, i) => i != index)
+    //   },
+    // },
+    // computed: {
+    //   charactersCount() {
+    //     return this.characters.length
+    //   },
+    // },
   }
 </script>

@@ -37,6 +37,10 @@ export default {
         {
           name: 'Slider',
           url: '/slider'
+        },
+        {
+          name: 'Calculator',
+          url: '/calculator'
         }
       ]
     }

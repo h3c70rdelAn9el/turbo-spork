@@ -11,9 +11,6 @@
             <h1 class="text-xl text-center">
               Login
             </h1>
-            <!-- <GoogleLogin @close-login-from-google='close()' />
-          
-          <p class="my-5 text-center">Or use email</p> -->
             <div>
               <form class="p-2 my-2" @submit.prevent="submit">
                 <div>
