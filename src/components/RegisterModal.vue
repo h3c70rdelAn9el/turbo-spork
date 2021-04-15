@@ -9,10 +9,20 @@
         <div class="z-30 m-auto bg-gray-100 p-2 rounded shadow-lg w-1/2">
           <div class="p-2 border bg-white">
             <h1 class="text-xl text-center">
-              Login
+              Register
             </h1>
             <div>
               <form class="p-2 my-2" @submit.prevent="submit">
+                <div>
+                  <label class="my-4" for="name">Name</label>
+                  <input
+                    ref="nameRef"
+                    v-model="name"
+                    type="text"
+                    class="rounded shadow p-2 w-full"
+                    placeholder="Frodo Skywalker"
+                  />
+                </div>
                 <div>
                   <label class="my-4" for="email">Email</label>
                   <input
@@ -37,12 +47,11 @@
                     type="submit"
                     class="w-full rounded shadow-md bg-blue-400 text-black p-2 hover:bg-blue-200"
                   >
-                    <span v-if="!isLoading">Login</span>
+                    <span v-if="!isLoading">Register</span>
                     <span v-else>⏳</span>
                   </button>
                   <Google @close-google-login="close" />
-                  <p class="text-center text-black text-md mt-2">Need an account?</p>
-                  <button class="w-full rounded shadow-md bg-blue-700 text-blue-200 p-2 hover:bg-blue-400" @click="$emit('open-register')">Register</button>
+
                 </div>
               </form>
             </div>
@@ -63,6 +72,7 @@ export default {
   },
   data() {
     return {
+      name: '',
       email: '',
       password: '',
       isLoading: false,
@@ -73,8 +83,9 @@ export default {
       this.isLoading = true
       firebase
         .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
+        .createUserWithEmailAndPassword(this.email, this.password)
         .then(() => {
+          this.name = '',
           this.email = ''
           this.password = ''
           this.isLoading = false
@@ -86,12 +97,12 @@ export default {
         })
     },
     close() {
-      this.$emit('close-login')
+      this.$emit('close-register')
     },
  
   },
   mounted() {
-    this.$refs.emailRef.focus()
+    this.$refs.nameRef.focus()
   },
 }
 </script>
