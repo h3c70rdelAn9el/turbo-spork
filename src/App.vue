@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar :isLoggedIn="isLoggedIn" @open-login="isLoginOpen = true" />
+    <Navbar  @open-login="isLoginOpen = true" />
     <div class="bg-gray-300">
       <router-view />
     </div>
@@ -24,9 +24,7 @@
     data() {
       return {
         isLoginOpen: false,
-        isLoggedIn: false,
         isRegisterOpen: false,
-        authUser: {}
       }
     },
     mounted() {
@@ -34,14 +32,13 @@
         .auth()
         .onAuthStateChanged((user) => {
           if (user) {
-            this.isLoggedIn = true
-            this.authUser = user
+            this.$store.commit('setIsLoggedIn', true)
+            this.$store.commit('setAuthUser', user)
           } else {
-            this.isLoggedIn = false
-            this.authUser = {}
+            this.$store.commit('setIsLoggedIn', false)
+            this.$store.commit('setAuthUser', {})
           }
         })
     },
-
   }
 </script>

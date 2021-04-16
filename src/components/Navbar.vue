@@ -71,10 +71,10 @@
   import { ref } from 'vue'
 
   export default {
-    props: { isLoggedIn: { type: Boolean, required: true } },
-
-    setup() {
-      const links = ref([
+    // props: { isLoggedIn: { type: Boolean, required: true } },
+    data() {
+      return {
+        links: [
         {
           name: 'Characters',
           url: '/characters',
@@ -95,16 +95,25 @@
           name: 'Calculator',
           url: '/calculator',
         },
-      ])
+        ]
+      }
+    },
+      computed: {
+        isLoggedIn() {
+          return this.$store.state.isLoggedIn
+        }
+      },
+    setup() {
 
       function logout() {
         firebase.auth().signOut()
       }
 
+
       const isOpen = ref(false)
       // const isHidden = ref(false)
       
-      return { links, logout, isOpen }
-    }
+      return {  logout, isOpen }
+    },
   }
 </script>
