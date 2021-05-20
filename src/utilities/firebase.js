@@ -10,7 +10,17 @@ const firebaseConfig = {
   messagingSenderId: "210763051175",
   appId: "1:210763051175:web:7e079d0b64ed9a88f9ab82",
   measurementId: "G-2HCF4WG0MG"
-};
+
+
+  // apiKey: process.env.VUE_APP_FIREBASE_APIKEY,
+  // authDomain: process.env.VUE_APP_FIREBASE_AUTHDOMAIN,
+  // databaseURL: process.env.VUE_APP_FIREBASE_DATABASEURL,
+  // projectId: process.env.VUE_APP_FIREBASE_PROJECTID,
+  // storageBucket: process.env.VUE_APP_FIREBASE_STORAGEBUCKET,
+  // messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGINGSENDERID,
+  // appId: process.env.VUE_APP_FIREBASE_APPID,
+  // measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENTID,
+}
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 

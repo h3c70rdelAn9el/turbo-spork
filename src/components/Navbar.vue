@@ -41,11 +41,11 @@
       <button
         v-if="isOpen"
         @click="isOpen = false"
-        class="fixed inset-0 h-full w-full cursor-default bg-gray-900 opacity-90"
+        class="absolute z-40 inset-0 h-full w-full cursor-default bg-black opacity-90"
       >
         <div
           :class="isOpen ? 'block' : 'hidden'"
-          class="relative z-20 px-2 pt-2 pb-4 sm:p-0"
+          class="relative z-40 px-2 pt-2 pb-4 sm:p-0"
         >
           <div v-for="link in links" :key="link">
             <router-link

@@ -5,7 +5,7 @@
         <div v-if="currentSlide === index" class=" w-full" :class="color" style="height:450px"></div>
       </transition>
     </div>
-    <div class="w-full flex z-20" style="height: 450px">
+    <div class="w-full flex z-10" style="height: 450px">
       <div class="mx-auto my-auto text-center">
         <h2 class="text-2xl">A basic carousel!</h2>
         <p class="mx-28">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptates similique suscipit amet, nesciunt soluta minus eligendi eum voluptas quaerat!</p>
