@@ -39,6 +39,7 @@
             this.$store.commit('setAuthUser', {})
           }
         })
+    
     },
   }
 </script>

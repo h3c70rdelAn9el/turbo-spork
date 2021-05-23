@@ -5,6 +5,7 @@ import Calendar from './src/pages/Calendar.vue'
 import Markdown from './src/pages/Markdown.vue'
 import Slider from '@/pages/Slider.vue'
 import Calculator from '@/pages/Calculator.vue'
+import Chat from '@/pages/Chat.vue'
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/calculator',
     component: Calculator
+  },
+  {
+    path: '/chat',
+    component: Chat
   }
 ]
 

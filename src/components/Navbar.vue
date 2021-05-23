@@ -8,7 +8,7 @@
         <button
           @click="isOpen = !isOpen"
           type="button"
-          class="text-gray-800 hover:text-white focus:text-white focus:outline-none mt-1"
+          class="text-gray-400 hover:text-black focus:text-white focus:outline-none mt-1"
         >
           <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
             <path
@@ -71,7 +71,6 @@
   import { ref } from 'vue'
 
   export default {
-    // props: { isLoggedIn: { type: Boolean, required: true } },
     data() {
       return {
         links: [
@@ -95,6 +94,10 @@
           name: 'Calculator',
           url: '/calculator',
         },
+        {
+          name: 'Chat',
+          url: '/chat'
+        }
         ]
       }
     },
