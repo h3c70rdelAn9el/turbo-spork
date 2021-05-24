@@ -24,8 +24,7 @@
           </svg>
         </button>
       </div>
-      <div class="hidden lg:block" >
-
+      <div class="hidden lg:block">
         <div class="flex flex-row">
           <div v-for="link in links" :key="link">
             <router-link :to="link.url">
@@ -55,8 +54,18 @@
             >
           </div>
           <div class="text-gray-300 text-xl">
-            <button v-if="isLoggedIn" class="hover:text-gray-800 " @click="logout">Log Out</button>
-            <button v-else class="hover:text-gray-800 hover:bg-gray-200 rounded-md mt-2 p-1" @click="$emit('open-login')">
+            <button
+              v-if="isLoggedIn"
+              class="hover:text-gray-800 "
+              @click="logout"
+            >
+              Log Out
+            </button>
+            <button
+              v-else
+              class="hover:text-gray-800 hover:bg-gray-200 rounded-md mt-2 p-1"
+              @click="$emit('open-login')"
+            >
               Login
             </button>
           </div>
@@ -115,7 +124,7 @@
 
       const isOpen = ref(false)
       // const isHidden = ref(false)
-      
+
       return {  logout, isOpen }
     },
   }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar  @open-login="isLoginOpen = true" />
+    <Navbar  @open-login="isLoginOpen = true" :isLoggedIn="isLoggedIn" />
     <div class="bg-gray-300">
       <router-view />
     </div>
@@ -23,6 +23,8 @@
     },
     data() {
       return {
+        // isLoggedIn: false,
+        // authUser: {},
         isLoginOpen: false,
         isRegisterOpen: false,
       }
