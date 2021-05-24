@@ -1,5 +1,5 @@
 <template>
-  <section class="flex w-full h-full">
+  <section class="flex w-full h-min-screen">
     <div class="m-auto">
       <h1 class="text-3xl text-center">
         Chat <span class="text-xs">using Vue3</span>

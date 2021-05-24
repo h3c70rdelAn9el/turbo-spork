@@ -58,6 +58,11 @@ import firebase from '../utilities/firebase'
 import Google from '@/components/Login/Google.vue'
 
 export default {
+  computed: {
+    isLoginOpen(){
+      return this.$store.state.isLoginOpen
+    }
+  },
   components: {
     Google
   },

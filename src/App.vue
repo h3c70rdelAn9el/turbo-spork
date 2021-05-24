@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="flex flex-col h-full">
     <Navbar  @open-login="isLoginOpen = true" :isLoggedIn="isLoggedIn" />
-    <div class="bg-gray-300">
-      <router-view />
-    </div>
+    <router-view class="bg-gray-200"/>
+    <footer class="bg-black h-6 fixed bottom-1">footer</footer>
     <LoginModal v-if="isLoginOpen" @close-login="isLoginOpen = false" @open-register="isRegisterOpen = true" />
     <RegisterModal v-if="isRegisterOpen" @open-register="isRegisterOpen =  true" @close-register="isRegisterOpen = false" />
   </div>
@@ -34,8 +33,9 @@
         .auth()
         .onAuthStateChanged((user) => {
           if (user) {
-            this.$store.commit('setIsLoggedIn', true)
             this.$store.commit('setAuthUser', user)
+            this.$store.commit('setIsLoggedIn', true),
+            this.$store.commit('setLoginModal', false)
           } else {
             this.$store.commit('setIsLoggedIn', false)
             this.$store.commit('setAuthUser', {})

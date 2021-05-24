@@ -6,6 +6,7 @@ import Markdown from './src/pages/Markdown.vue'
 import Slider from '@/pages/Slider.vue'
 import Calculator from '@/pages/Calculator.vue'
 import Chat from '@/pages/Chat.vue'
+import store from './src/store/index'
 
 const routes = [
   {
@@ -34,7 +35,15 @@ const routes = [
   },
   {
     path: '/chat',
-    component: Chat
+    component: Chat,
+    meta: { middlewater: 'auth' },
+    beforeEnter : ( _, __, next ) => {
+      if (!store.state.isLoggedIn) {
+        next('/')
+      } else {
+        next()
+      }
+    }
   }
 ]
 
@@ -42,5 +51,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+router.beforeEach((to) => {
+  if (to.meta.middleware) {
+    console.log(to.meta.middleware);
+  }
+}) 
 
 export default router;
