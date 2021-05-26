@@ -83,49 +83,50 @@
     data() {
       return {
         links: [
-        {
-          name: 'Characters',
-          url: '/characters',
-        },
-        {
-          name: 'Calendar',
-          url: '/calendar',
-        },
-        {
-          name: 'Markdown',
-          url: '/markdown',
-        },
-        {
-          name: 'Slider',
-          url: '/slider',
-        },
-        {
-          name: 'Calculator',
-          url: '/calculator',
-        },
-        {
-          name: 'Chat',
-          url: '/chat'
-        }
-        ]
+          {
+            name: 'Characters',
+            url: '/characters',
+          },
+          {
+            name: 'Calendar',
+            url: '/calendar',
+          },
+          {
+            name: 'Markdown',
+            url: '/markdown',
+          },
+          {
+            name: 'Calculator',
+            url: '/calculator',
+          },
+          {
+            name: 'Slider',
+            url: '/slider',
+          },
+          {
+            name: 'Drag',
+            url: '/drag'
+          },
+          {
+            name: 'Chat',
+            url: '/chat',
+          },
+        ],
       }
     },
-      computed: {
-        isLoggedIn() {
-          return this.$store.state.isLoggedIn
-        }
+    computed: {
+      isLoggedIn() {
+        return this.$store.state.isLoggedIn
       },
+    },
     setup() {
-
       function logout() {
         firebase.auth().signOut()
       }
 
-
       const isOpen = ref(false)
-      // const isHidden = ref(false)
 
-      return {  logout, isOpen }
+      return { logout, isOpen }
     },
   }
 </script>

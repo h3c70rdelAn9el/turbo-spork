@@ -115,40 +115,5 @@
 
       return { characters, newCharacter, remove, addCharacter, newCharacterRef, charactersCount }
     }
-    // data() {
-    //   return {
-    //     newCharacter: [
-    //       {
-    //         name: '',
-    //         house: '',
-    //       },
-    //     ],
-    //     characters: [
-
-    //     ],
-    //   }
-    // },
-    // mounted() {
-    //   this.$refs.newCharacterRef.focus()
-    // },
-    // methods: {
-    //   addCharacter() {
-    //     if (this.newCharacter !== '') {
-    //       this.characters.push({
-    //         name: this.newCharacter.name,
-    //         house: this.newCharacter.house,
-    //       })
-    //       this.newCharacter = ''
-    //     }
-    //   },
-    //   removeCharacter(index) {
-    //     this.characters = this.characters.filter((character, i) => i != index)
-    //   },
-    // },
-    // computed: {
-    //   charactersCount() {
-    //     return this.characters.length
-    //   },
-    // },
   }
 </script>

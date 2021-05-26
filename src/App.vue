@@ -22,8 +22,6 @@
     },
     data() {
       return {
-        // isLoggedIn: false,
-        // authUser: {},
         isLoginOpen: false,
         isRegisterOpen: false,
       }

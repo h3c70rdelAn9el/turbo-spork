@@ -42,7 +42,6 @@ export default {
     return {
       currentDate: new Date().getUTCDate(),
       currentMonth:new Date().getMonth(),
-      // currentMonthName: new Date().toLocaleString('default', {month: 'long'}),
       days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       currentYear: new Date().getFullYear(),
     }
