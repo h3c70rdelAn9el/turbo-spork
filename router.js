@@ -7,6 +7,7 @@ import Slider from '@/pages/Slider.vue'
 import Calculator from '@/pages/Calculator.vue'
 import Chat from '@/pages/Chat.vue'
 import Draggable from '@/pages/Draggable.vue'
+import Todo from '@/pages/Todo.vue'
 import store from './src/store/index'
 
 
@@ -50,6 +51,10 @@ const routes = [
   {
     path: '/drag',
     component: Draggable
+  },
+  {
+    path: '/todo',
+    component: Todo
   }
 ]
 

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-full">
     <Navbar  @open-login="isLoginOpen = true" :isLoggedIn="isLoggedIn" />
-    <router-view class="bg-gray-200"/>
+    <router-view class=""/>
     <footer class="bg-black h-6 fixed bottom-1">footer</footer>
     <LoginModal v-if="isLoginOpen" @close-login="isLoginOpen = false" @open-register="isRegisterOpen = true" />
     <RegisterModal v-if="isRegisterOpen" @open-register="isRegisterOpen =  true" @close-register="isRegisterOpen = false" />

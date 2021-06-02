@@ -111,6 +111,10 @@
             name: 'Chat',
             url: '/chat',
           },
+          {
+            name: 'Todo',
+            url: '/todo'
+          }
         ],
       }
     },
