@@ -7,14 +7,21 @@
           <label class="text-sm">Title</label>
           <input class="w-full p-2 rounded border" v-model="form.title" />
         </div>
-        <div class="flex">
-          <button class="p-2 mx-auto">
-            <input
-              class="w-full p-2 rounded-md border shadow hover:bg-gray-300 cursor-pointer"
+        <div class="flex justify-between mx-5">
+          <button class="p-2 rounded-md border py-2 shadow hover:bg-gray-300 cursor-pointer"
+              type="submit">
+            <!-- <input
+              class="w-full p-2 rounded-md border py-2 shadow hover:bg-gray-300 cursor-pointer"
               type="submit"
-            />
+            /> -->
+            Update
           </button>
-
+            <button
+              class="bg-red-400 text-white border rounded-md px-2 shadow hover:bg-red-600"
+              @click="deleteTodo(id)"
+            >
+              Delete
+            </button>
         </div>
       </div>
     </form>
