@@ -7,7 +7,9 @@ import Slider from '@/pages/Slider.vue'
 import Calculator from '@/pages/Calculator.vue'
 import Chat from '@/pages/Chat.vue'
 import Draggable from '@/pages/Draggable.vue'
-import Todo from '@/pages/Todo.vue'
+import TodoList from '@/pages/TodoList.vue'
+// import EditTodoModal from '@/components/Todo/EditTodoModal.vue'
+import EditTodo from '@/pages/EditTodo.vue'
 import store from './src/store/index'
 
 
@@ -53,8 +55,13 @@ const routes = [
     component: Draggable
   },
   {
-    path: '/todo',
-    component: Todo
+    path: '/todos',
+    component: TodoList
+  },
+  {
+    path: '/edit/:id',
+    name: 'Edit',
+    component: EditTodo
   }
 ]
 

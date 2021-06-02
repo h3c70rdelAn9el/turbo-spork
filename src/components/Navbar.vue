@@ -113,7 +113,7 @@
           },
           {
             name: 'Todo',
-            url: '/todo'
+            url: '/todos'
           }
         ],
       }

@@ -16,10 +16,13 @@
               <tr v-for="{ id, title } in todos" :key="id" class="border-b px-2 py-1">
                 <!-- <td>{{ todo.title }}</td> -->
                 <td>{{ title }}</td>
-                <td class="flex">
+                <td class="flex justify-center">
+                   <router-link :to="`/edit/${id}`">
                   <button class="border rounded-md px-2 py-1 shadow-lg mx-auto">
                     Edit
                   </button>
+             
+            </router-link>
                 </td>
               </tr>
             </tbody>
@@ -31,6 +34,7 @@
 </template>
 
 <script>
+// import EditTodoModal from '../components/Todo/EditTodoModal.vue'
 // import { reactive } from 'vue'
 // import axios from 'axios'
 import { useLoadTodos } from '../utilities/firebase'
@@ -38,7 +42,7 @@ import AddTodoModal from '../components/Todo/AddTodoModal.vue'
 
 export default {
   components: { 
-    AddTodoModal,
+    AddTodoModal
   },
   // setup() {
   //   const state = reactive({
