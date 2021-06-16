@@ -1,0 +1,155 @@
+[debug] [2021-06-16T21:36:59.224Z] ----------------------------------------------------------------------
+[debug] [2021-06-16T21:36:59.227Z] Command:       /Users/H3C70R/.nvm/versions/node/v15.4.0/bin/node /Users/H3C70R/.nvm/versions/node/v15.4.0/bin/firebase deploy
+[debug] [2021-06-16T21:36:59.227Z] CLI Version:   9.13.0
+[debug] [2021-06-16T21:36:59.227Z] Platform:      darwin
+[debug] [2021-06-16T21:36:59.227Z] Node Version:  v15.4.0
+[debug] [2021-06-16T21:36:59.229Z] Time:          Wed Jun 16 2021 14:36:59 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-06-16T21:36:59.229Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-16T21:36:59.241Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-16T21:36:59.241Z] > authorizing via signed-in user (hectordelangel@gmail.com)
+[debug] [2021-06-16T21:36:59.242Z] [iam] checking project vue-crud-56d9f for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2021-06-16T21:36:59.244Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-crud-56d9f:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2021-06-16T21:36:59.585Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:36:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=187","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:36:59.589Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/vue-crud-56d9f/serviceAccounts/vue-crud-56d9f@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-06-16T21:36:59.839Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:36:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:36:59.841Z] > refreshing access token with scopes: []
+[debug] [2021-06-16T21:36:59.842Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-16T21:37:00.001Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Wed, 16 Jun 2021 21:36:59 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:00.092Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f [none]
+[debug] [2021-06-16T21:37:00.293Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f 200
+[debug] [2021-06-16T21:37:00.293Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f {"projectId":"vue-crud-56d9f","projectNumber":"210763051175","displayName":"vue-crud","name":"projects/vue-crud-56d9f","resources":{"hostingSite":"vue-crud-56d9f","realtimeDatabaseInstance":"vue-crud-56d9f","storageBucket":"vue-crud-56d9f.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-06-16T21:37:00.294Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f [none]
+[debug] [2021-06-16T21:37:00.464Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f 200
+[debug] [2021-06-16T21:37:00.464Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f {"projectId":"vue-crud-56d9f","projectNumber":"210763051175","displayName":"vue-crud","name":"projects/vue-crud-56d9f","resources":{"hostingSite":"vue-crud-56d9f","realtimeDatabaseInstance":"vue-crud-56d9f","storageBucket":"vue-crud-56d9f.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'vue-crud-56d9f'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2021-06-16T21:37:00.471Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-16T21:37:00.472Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-16T21:37:00.671Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 16 Jun 2021 21:37:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:00.734Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/vue-crud-56d9f/locations/-/instances/vue-crud-56d9f  
+ 
+[debug] [2021-06-16T21:37:01.344Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:01.349Z] >>> HTTP REQUEST PUT https://vue-crud-56d9f.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2021-06-16T21:37:01.669Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Wed, 16 Jun 2021 21:37:01 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database vue-crud-56d9f is valid 
+[debug] [2021-06-16T21:37:01.678Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/vue-crud-56d9f  
+ 
+[debug] [2021-06-16T21:37:02.164Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2021-06-16T21:37:02.168Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f:test  
+ {"source":{"files":[{"name":"storage.rules","content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-16T21:37:02.620Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2021-06-16T21:37:02.627Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f:test  
+ {"source":{"files":[{"name":"firestore.rules","content":"service cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      // This rule allows anyone with your database reference to view, edit,\n      // and delete all data in your database. It is useful for getting\n      // started, but it is configured to expire after 30 days because it\n      // leaves your app open to attackers. At that time, all client\n      // requests to your database will be denied.\n      //\n      // Make sure to write security rules for your app before that time, or\n      // else all client requests to your database will be denied until you\n      // update your rules.\n      allow read, write: if request.time < timestamp.date(2021, 7, 16);\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-16T21:37:03.394Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  [W] undefined:undefined - Ruleset uses old version (version [1]). Please update to the latest version (version [2]). 
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2021-06-16T21:37:03.399Z] Validating nodejs source
+[debug] [2021-06-16T21:37:05.964Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-06-16T21:37:05.965Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-06-16T21:37:05.968Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/vue-crud-56d9f/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-06-16T21:37:05.969Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/vue-crud-56d9f/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-06-16T21:37:05.969Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/vue-crud-56d9f/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-16T21:37:06.398Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:06.433Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2021-06-16T21:37:06.437Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/vue-crud-56d9f/services/cloudbuild.googleapis.com:enable  
+ 
+[debug] [2021-06-16T21:37:06.441Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-06-16T21:37:07.258Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:17.262Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/vue-crud-56d9f/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-06-16T21:37:17.691Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-06-16T21:37:17.702Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/vue-crud-56d9f/adminSdkConfig  
+ 
+[debug] [2021-06-16T21:37:17.934Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:17.936Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/vue-crud-56d9f/configs  
+ 
+[debug] [2021-06-16T21:37:18.223Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:18.224Z] Analyzing nodejs backend spec
+[debug] [2021-06-16T21:37:18.747Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/vue-crud-56d9f/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-06-16T21:37:20.185Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:20.187Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-06-16T21:37:20.595Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:20.596Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/rulesets/eaa87a1a-34a9-4e8e-a5c3-1d9c852dc820  
+ 
+[debug] [2021-06-16T21:37:20.982Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  storage: uploading rules storage.rules... 
+[debug] [2021-06-16T21:37:20.984Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/rulesets  
+ {"source":{"files":[{"name":"storage.rules","content":"rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if request.auth!=null;\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-16T21:37:21.414Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:21.415Z] [rules] created ruleset projects/vue-crud-56d9f/rulesets/2dfc7e53-153f-422f-a378-3836ab7832e1
+[debug] [2021-06-16T21:37:21.416Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-06-16T21:37:21.417Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/vue-crud-56d9f/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-06-16T21:37:21.702Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:21.703Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/vue-crud-56d9f/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-06-16T21:37:21.755Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:21.756Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/rulesets/6bba077f-d94c-454e-946e-05e2df9ee501  
+ 
+[debug] [2021-06-16T21:37:21.919Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully 
+[debug] [2021-06-16T21:37:22.110Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2021-06-16T21:37:22.112Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/vue-crud-56d9f/rulesets  
+ {"source":{"files":[{"name":"firestore.rules","content":"service cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      // This rule allows anyone with your database reference to view, edit,\n      // and delete all data in your database. It is useful for getting\n      // started, but it is configured to expire after 30 days because it\n      // leaves your app open to attackers. At that time, all client\n      // requests to your database will be denied.\n      //\n      // Make sure to write security rules for your app before that time, or\n      // else all client requests to your database will be denied until you\n      // update your rules.\n      allow read, write: if request.time < timestamp.date(2021, 7, 16);\n    }\n  }\n}\n"}]}}
+[debug] [2021-06-16T21:37:22.644Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 16 Jun 2021 21:37:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-16T21:37:22.644Z] [rules] created ruleset projects/vue-crud-56d9f/rulesets/f3b367e4-fab0-40df-b0ae-779340b1c21e
+[debug] [2021-06-16T21:37:22.752Z] TypeError: Cannot read property 'backend' of undefined
+    at Object.checkHttpIam (/Users/H3C70R/.nvm/versions/node/v15.4.0/lib/node_modules/firebase-tools/lib/deploy/functions/checkIam.js:31:41)
+    at deploy (/Users/H3C70R/.nvm/versions/node/v15.4.0/lib/node_modules/firebase-tools/lib/deploy/functions/deploy.js:36:22)
+    at _chain (/Users/H3C70R/.nvm/versions/node/v15.4.0/lib/node_modules/firebase-tools/lib/deploy/index.js:23:40)
+    at /Users/H3C70R/.nvm/versions/node/v15.4.0/lib/node_modules/firebase-tools/lib/deploy/index.js:26:20
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
