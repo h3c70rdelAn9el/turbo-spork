@@ -2,7 +2,7 @@
   <div>
     <nav class="nav flex flex-row justify-between mx-3">
       <div class="w-10 mt-1">
-        <router-link to="/">Home</router-link>
+        <router-link to="/" class="text-gray-200">Home</router-link>
       </div>
       <div class="lg:hidden">
         <button
@@ -28,11 +28,11 @@
         <div class="flex flex-row">
           <div v-for="link in links" :key="link">
             <router-link :to="link.url">
-              <p class="mr-2 p-1">{{ link.name }}</p>
+              <p class="mr-2 p-1 text-gray-200">{{ link.name }}</p>
             </router-link>
           </div>
-          <button v-if="isLoggedIn" @click="logout">Log Out</button>
-          <button v-else class="mr-2" @click="$emit('open-login')">
+          <button v-if="isLoggedIn" @click="logout" class="text-gray-200">Log Out</button>
+          <button v-else class="mr-2 text-gray-200" @click="$emit('open-login')">
             Login
           </button>
         </div>

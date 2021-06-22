@@ -2,7 +2,7 @@
   <div class="flex flex-col h-full">
     <Navbar  @open-login="isLoginOpen = true" :isLoggedIn="isLoggedIn" />
     <router-view class=""/>
-    <footer class="bg-black h-6 fixed bottom-1">footer</footer>
+    <footer class="bg-black h-8 w-full fixed bottom-0 text-purple-200">awesome background made using <a href="svgbackgrounds.com">svgbackgrounds.com</a>👏🏼 </footer>
     <LoginModal v-if="isLoginOpen" @close-login="isLoginOpen = false" @open-register="isRegisterOpen = true" />
     <RegisterModal v-if="isRegisterOpen" @open-register="isRegisterOpen =  true" @close-register="isRegisterOpen = false" />
   </div>
@@ -39,7 +39,6 @@
             this.$store.commit('setAuthUser', {})
           }
         })
-    
     },
   }
 </script>
